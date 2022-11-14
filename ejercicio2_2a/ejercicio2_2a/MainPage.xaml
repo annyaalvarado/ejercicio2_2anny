@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls ="clr-namespace:SignaturePad.Forms;assembly=SignaturePad.Forms"
+             x:Class="ejercicio2_2a.MainPage"
+             Visual="Material">
+    
+
+    <StackLayout>
+
+        <Frame BackgroundColor="white" Margin="0,0,0,0" Padding="0,10,0,0">
+            <Label Text="Firma Digital" HorizontalOptions="CenterAndExpand"  FontAttributes="Bold" FontSize="30" TextColor="black"/>
+        </Frame>
+
+        <controls:SignaturePadView x:Name="Sign" StrokeWidth="2" Margin="0,0,0,0" WidthRequest="350" HeightRequest="380" StrokeColor="#6F6F6F" HorizontalOptions="Center" VerticalOptions="Start"
+                                   />
+
+        <Entry x:Name="txtNombre" Keyboard="Text" Placeholder="Ingresar Nombre de la imagen" Margin="20,20,20,0"
+               />
+
+        <Entry x:Name="txtDescripcion" Keyboard="Text" Placeholder="Ingresar Descripcion de la imagen" Margin="20,20,20,0"
+               />
+
+        <StackLayout Orientation="Horizontal"   Margin="30,30,45,10">
+            <Button Text="Lista de firmas" BackgroundColor="DeepSkyBlue" x:Name="btnlista" CornerRadius="10" BorderColor="DarkSlateBlue" BorderWidth="3" TextColor="White" HorizontalOptions="StartAndExpand" Clicked="btnlista_Clicked" />
+
+            <Button Text="Salvar en Sql" BackgroundColor="DeepSkyBlue" x:Name="btnguardar" CornerRadius="10" BorderColor="DarkSlateBlue" BorderWidth="3" TextColor="White" HorizontalOptions="EndAndExpand" Clicked="btnguardar_Clicked"/>
+
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
+
